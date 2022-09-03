@@ -29,7 +29,7 @@ public class GridEditor : MonoBehaviour
         m_Lvl.Clear();
         for (int i = 0; i < l_No; i++)
         {
-            m_Lvl.Add(new Vector3(Random.Range(1,5), Random.Range(1,5), 0f));
+            m_Lvl.Add(new Vector3(Random.Range(1, 5), Random.Range(1, 5), 0f));
         }
     }
     [Button]
@@ -37,18 +37,18 @@ public class GridEditor : MonoBehaviour
     {
         LvlNo = 0;
         ChangeLvl();
-        DOTween.SetTweensCapacity(500, 50);
+        DOTween.SetTweensCapacity(2500, 100);
     }
     public void ChangeLvl()
     {
         m_CurrentLvl.text = "Level:" + LvlNo;
         LvlNo++;
         MakeGrid(m_Lvl[LvlNo]);
-        Debug.Log("Current:"+m_Lvl[LvlNo]);
-    } 
+        Debug.Log("Current:" + m_Lvl[LvlNo]);
+    }
     public void LateUpdate()
     {
-       transform.localRotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(-orbitY, 0, orbitZ), orbitSmooth);
+        transform.localRotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(-orbitY, 0, orbitZ), orbitSmooth);
     }
     public Vector3 FindCenterOfTransforms(List<Transform> transforms)
     {
@@ -69,7 +69,7 @@ public class GridEditor : MonoBehaviour
             if (item == null) return;
             Destroy(item.gameObject);
         }
-       StartCoroutine(Add3DGrid(l_V));
+        StartCoroutine(Add3DGrid(l_V));
     }
 
     public IEnumerator Add3DGrid(Vector3 Grid)
@@ -77,23 +77,23 @@ public class GridEditor : MonoBehaviour
         cells.Clear();
         //transform.GetChild(0).position = new Vector3((Grid.x - 2) , (Grid.y - 2), (Grid.z - 2))*-1;
         for (int i = 0; i < Grid.x; i++)
-        {        
+        {
             for (int j = 0; j < Grid.y; j++)
             {
                 for (int k = 0; k < Grid.z; k++)
                 {
                     GameObject cell = PrefabUtility.InstantiatePrefab(CellPrefab, transform) as GameObject;
-                    cell.transform.localPosition = new Vector3(Distance.x * k, Distance.y * j, Distance.z * i);                    
+                    cell.transform.localPosition = new Vector3(Distance.x * k, Distance.y * j, Distance.z * i);
                     var CellScr = cell.GetComponent<Cell>();
                     CellScr.Finalquaternion = cell.transform.position;
                     CellScr.BeforeRotationPos = new Vector3(3 * k, 3 * j, 3 * i);
                     cells.Add(CellScr);
-                    cell.name = ""+i+""+j+""+ k;
+                    cell.name = "" + i + "" + j + "" + k;
                     //if (Grid.x - 2 == i && j == k && i == j) CellScr.IsMiddelCell = true;
-                    CellScr.m_Visual.SetActive(false);                    
-                   /*cell.transform.rotation = Quaternion.Euler(0f,Random.Range(0f,180f),0f);*/
+                    CellScr.m_Visual.SetActive(false);
+                    /*cell.transform.rotation = Quaternion.Euler(0f,Random.Range(0f,180f),0f);*/
                     FindCellsNeighber();
-                  //  Effect(cell,k,j,i,new Vector3(3* k, 3*j,3*i),CellScr);
+                    //  Effect(cell,k,j,i,new Vector3(3* k, 3*j,3*i),CellScr);
                 }
             }
         }
@@ -113,9 +113,9 @@ public class GridEditor : MonoBehaviour
         l_Cell.transform.rotation = Quaternion.Euler(0f, Random.Range(0f, 180f), 0f);
         l_Cell.m_Visual.SetActive(true);
         l_Cell.transform.DOMove(l_Cell.Finalquaternion, 1f).SetEase(Ease.OutCubic);
-        l_Cell.transform.DORotateQuaternion(Quaternion.Euler(l_Cell.Direction*90), 1.2f);        
-        //l_Cell.transform.DOMove(oldposition, 1f).SetEase(Ease.InSine);
-        //l_Cell.transform.DORotateQuaternion(Quaternion.Euler(Direction),1f).SetEase(Ease.InBounce).OnComplete(()=> { ArrangeCells(); });       
+        l_Cell.transform.DORotateQuaternion(Quaternion.Euler(l_Cell.Direction * 90), 1f);        //1.3f
+        //l_Cell.transform.DOMove(Vector3.zero, 1f).SetEase(Ease.InSine);
+        //l_Cell.transform.DORotateQuaternion(Quaternion.Euler(l_Cell.Direction * 90),1f).SetEase(Ease.InBounce).OnComplete(()=> { ArrangeCells(); });       
     }
     [Button]
     private void RenameAll()
@@ -207,9 +207,9 @@ public class GridEditor : MonoBehaviour
                         cells[i].X_cells[j].isDirty = true;
                     }
                 }
+            }
         }
     }
-    }    
     public FACE_TO GetOppsiteFace(FACE_TO l_FaceTo)
     {
         switch (l_FaceTo)
@@ -304,7 +304,7 @@ public class GridEditor : MonoBehaviour
     {
         for (int i = 0; i < cells.Count; i++)
         {
-             cells[i].Check();
+            cells[i].Check();
             //Effect(cells[i]);
         }
         foreach (Cell item in cells)

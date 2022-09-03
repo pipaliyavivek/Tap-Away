@@ -4,7 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum FACE_TO { LEFT,RIGHT,UP,DOWN,FORWORD,BACKWORD}
+public enum FACE_TO { LEFT, RIGHT, UP, DOWN, FORWORD, BACKWORD }
 public class Cell : MonoBehaviour
 {
     public bool isDirty;
@@ -16,7 +16,7 @@ public class Cell : MonoBehaviour
     internal Vector3 BeforeRotationPos;
 
     public GameObject m_Visual;
-    public bool IsMiddelCell=false;
+    public bool IsMiddelCell = false;
     [SerializeField] public List<Cell> X_cells = new List<Cell>();
     [SerializeField] public List<Cell> Y_cells = new List<Cell>();
     [SerializeField] public List<Cell> Z_cells = new List<Cell>();
@@ -46,22 +46,22 @@ public class Cell : MonoBehaviour
         else
         {
             Move = true;
-           
-            if(GridEditor.Instance.cells.Contains(this))
+
+            if (GridEditor.Instance.cells.Contains(this))
             {
                 GridEditor.Instance.cells.Remove(this);
             }
-            if(GridEditor.Instance.cells.Count==0)
+            if (GridEditor.Instance.cells.Count == 0)
             {
                 //Win
                 Debug.Log("You Win!!!");
-                DOVirtual.DelayedCall(0.5f, () => 
-                { 
-                   GridEditor.Instance.ChangeLvl();
+                DOVirtual.DelayedCall(0.7f, () =>
+                {
+                    GridEditor.Instance.ChangeLvl();
                 });
             }
-            
-            Destroy(gameObject, 2f);
+
+            Destroy(gameObject, 1f);
         }
     }
     public void ShakeinDirection(Vector3 Dir)
@@ -82,7 +82,7 @@ public class Cell : MonoBehaviour
     {
         transform.DOMove(transform.position + (transform.TransformDirection(Vector3.forward) * distance), 0.02f);
     }
-     public void SetDirection(FACE_TO i_face)
+    public void SetDirection(FACE_TO i_face)
     {
         m_faceTo = i_face;
         switch (i_face)
@@ -103,7 +103,7 @@ public class Cell : MonoBehaviour
                 Direction = Vector3.forward;
                 break;
             case FACE_TO.BACKWORD:
-                Direction = new Vector3(0,-2,0);
+                Direction = new Vector3(0, -2, 0);
                 break;
             default:
                 break;
@@ -113,16 +113,16 @@ public class Cell : MonoBehaviour
     [Button]
     public void Check()
     {
-     /*   if (Physics.Raycast(transform.position + (Vector3.one * 0.5f), transform.TransformDirection(Vector3.forward), out RaycastHit hit))//Forword
-        {
-            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward), Color.blue, 200f, true);
-            var m_OtherCell = hit.collider.GetComponent<Cell>();
-            if(m_OtherCell.m_faceTo *//*UP*//* == GetOppsiteFace(m_faceTo))
-            {
-               m_OtherCell.SetDirection(m_faceTo);
-               m_OtherCell.Check();
-            }
-        } */
+        /* if (Physics.Raycast(transform.position + (Vector3.one * 0.5f), transform.TransformDirection(Vector3.forward), out RaycastHit hit))//Forword
+         {
+             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward), Color.blue, 200f, true);
+             var m_OtherCell = hit.collider.GetComponent<Cell>();
+             if (m_OtherCell.m_faceTo == GetOppsiteFace(m_faceTo))
+             {
+                 m_OtherCell.SetDirection(m_faceTo);
+                 m_OtherCell.Check();
+             }
+         }*/
         RaycastHit[] hit = Physics.RaycastAll(transform.position, transform.TransformDirection(Vector3.forward), 50);//forward
         if (hit.Length > 0)
         {
@@ -132,15 +132,21 @@ public class Cell : MonoBehaviour
                 objects[i] = hit[i].collider.gameObject;
                 if (objects[i].GetComponent<Cell>().m_faceTo == GetOppsiteFace(m_faceTo))
                 {
-                    objects[i].GetComponent<Cell>().SetDirection(FACE_TO.UP);
-                    objects[i].GetComponent<Cell>().Check();
+                    Debug.Log(objects[i].name);
+                    // objects[i].GetComponent<Cell>().SetDirection(m_faceTo);
+                    // objects[i].GetComponent<Cell>().Check();
                     //m_OtherCell.SetDirection(m_faceTo);
                     //m_OtherCell.Check();
                 }
+                else
+                {
+                   // Debug.Log(objects[i].name);
+                }
+                //  objects[i].GetComponent<Cell>().SetDirection(GetOppsiteFace(m_faceTo));
             }
         }
     }
-   [ShowInInspector]public GameObject[] objects;
+    [ShowInInspector] public GameObject[] objects;
     public FACE_TO GetOppsiteFace(FACE_TO l_FaceTo)
     {
         switch (l_FaceTo)
@@ -201,6 +207,4 @@ public class Cell : MonoBehaviour
     //        }
     //    }
     //}
-
-
 }
