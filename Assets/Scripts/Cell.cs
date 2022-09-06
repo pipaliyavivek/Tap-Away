@@ -46,21 +46,20 @@ public class Cell : MonoBehaviour
         else
         {
             Move = true;
-
-            if (GridEditor.Instance.cells.Contains(this))
+            /* if (GridEditor.Instance.cells.Contains(this))
+             {
+                 GridEditor.Instance.cells.Remove(this);
+             }*/
+            /*  if (GridEditor.Instance.cells.Count == 0)
+              {*/
+            //Win
+            Debug.Log("You Win!!!");
+            DOVirtual.DelayedCall(0.7f, () =>
             {
-                GridEditor.Instance.cells.Remove(this);
-            }
-            if (GridEditor.Instance.cells.Count == 0)
-            {
-                //Win
-                Debug.Log("You Win!!!");
-                DOVirtual.DelayedCall(0.7f, () =>
-                {
-                    GridEditor.Instance.ChangeLvl();
+                GameManager.Instance.ChangeLvl();
+                    // GridEditor.Instance.ChangeLvl();
                 });
-            }
-
+            //  }
             Destroy(gameObject, 1f);
         }
     }
@@ -140,7 +139,7 @@ public class Cell : MonoBehaviour
                 }
                 else
                 {
-                   // Debug.Log(objects[i].name);
+                    // Debug.Log(objects[i].name);
                 }
                 //  objects[i].GetComponent<Cell>().SetDirection(GetOppsiteFace(m_faceTo));
             }

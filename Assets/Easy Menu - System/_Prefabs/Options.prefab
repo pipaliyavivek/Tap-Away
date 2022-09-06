@@ -1,0 +1,254 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1583393144689178
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4106575804427062}
+  - component: {fileID: 114058553320368304}
+  m_Layer: 0
+  m_Name: Options
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4106575804427062
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1583393144689178}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114058553320368304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1583393144689178}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5826df738d1a2ec40910dda466514a65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  caption: Options
+  size: {x: 300, y: 260}
+  scrollViewSize: {x: 0, y: 0}
+  position: {x: 0, y: 0}
+  globalAligment: 1
+  startAnimation: 4
+  animationSpeed: 50
+  skin: {fileID: 0}
+  icon: {fileID: 0}
+  draggable: 0
+  autoAdjustSize: 1
+  interactionSound: {fileID: 8300000, guid: d173922c51c5bda49b41bba60c3d3d0f, type: 3}
+  Elements:
+  - caption: CLOSE
+    icon: {fileID: 0}
+    type: 0
+    size: {x: 100, y: 20}
+    globalAligment: 3
+    position: {x: 0, y: 0}
+    startAnimation: 4
+    animationSpeed: 1
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 0
+    locked: 0
+    lockImage: {fileID: 0}
+  - caption: '    QUALITY'
+    icon: {fileID: 0}
+    type: 17
+    size: {x: 100, y: 20}
+    globalAligment: 12
+    position: {x: 0, y: 15}
+    startAnimation: 2
+    animationSpeed: 5
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 0
+    locked: 0
+    lockImage: {fileID: 0}
+  - caption: RESOLUTION
+    icon: {fileID: 0}
+    type: 17
+    size: {x: 80, y: 20}
+    globalAligment: 13
+    position: {x: 0, y: 15}
+    startAnimation: 1
+    animationSpeed: 5
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 0
+    locked: 0
+    lockImage: {fileID: 0}
+  - caption: Resolution_Scroll
+    icon: {fileID: 0}
+    type: 21
+    size: {x: 140, y: 170}
+    globalAligment: 13
+    position: {x: 0, y: 30}
+    startAnimation: 1
+    animationSpeed: 5
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 25
+    locked: 0
+    lockImage: {fileID: 0}
+  - caption: Very Low
+    icon: {fileID: 0}
+    type: 10
+    size: {x: 140, y: 20}
+    globalAligment: 0
+    position: {x: 5, y: 30}
+    startAnimation: 2
+    animationSpeed: 5
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 0
+    locked: 0
+    lockImage: {fileID: 0}
+  - caption: Low
+    icon: {fileID: 0}
+    type: 10
+    size: {x: 140, y: 20}
+    globalAligment: 0
+    position: {x: 5, y: 55}
+    startAnimation: 2
+    animationSpeed: 5
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 1
+    locked: 0
+    lockImage: {fileID: 0}
+  - caption: Better
+    icon: {fileID: 0}
+    type: 10
+    size: {x: 140, y: 20}
+    globalAligment: 0
+    position: {x: 5, y: 80}
+    startAnimation: 2
+    animationSpeed: 5
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 2
+    locked: 0
+    lockImage: {fileID: 0}
+  - caption: Standard
+    icon: {fileID: 0}
+    type: 10
+    size: {x: 140, y: 20}
+    globalAligment: 0
+    position: {x: 5, y: 105}
+    startAnimation: 2
+    animationSpeed: 5
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 3
+    locked: 0
+    lockImage: {fileID: 0}
+  - caption: High
+    icon: {fileID: 0}
+    type: 10
+    size: {x: 140, y: 20}
+    globalAligment: 0
+    position: {x: 5, y: 130}
+    startAnimation: 2
+    animationSpeed: 5
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 4
+    locked: 0
+    lockImage: {fileID: 0}
+  - caption: Ultra
+    icon: {fileID: 0}
+    type: 10
+    size: {x: 140, y: 20}
+    globalAligment: 0
+    position: {x: 5, y: 155}
+    startAnimation: 2
+    animationSpeed: 5
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 5
+    locked: 0
+    lockImage: {fileID: 0}
+  - caption: '   FULLSCREEN'
+    icon: {fileID: 0}
+    type: 22
+    size: {x: 140, y: 20}
+    globalAligment: 0
+    position: {x: 175, y: 205}
+    startAnimation: 1
+    animationSpeed: 5
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 5
+    locked: 0
+    lockImage: {fileID: 0}
+  - caption: MouseSens Slider
+    icon: {fileID: 0}
+    type: 25
+    size: {x: 70, y: 20}
+    globalAligment: 0
+    position: {x: 80, y: 200}
+    startAnimation: 2
+    animationSpeed: 5
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 0
+    locked: 0
+    lockImage: {fileID: 0}
+  - caption: Volume Slider
+    icon: {fileID: 0}
+    type: 27
+    size: {x: 70, y: 20}
+    globalAligment: 0
+    position: {x: 80, y: 220}
+    startAnimation: 2
+    animationSpeed: 5
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 0
+    locked: 0
+    lockImage: {fileID: 0}
+  - caption: Mouse Sens
+    icon: {fileID: 0}
+    type: 17
+    size: {x: 70, y: 70}
+    globalAligment: 0
+    position: {x: 10, y: 195}
+    startAnimation: 2
+    animationSpeed: 5
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 0
+    locked: 0
+    lockImage: {fileID: 0}
+  - caption: Volume
+    icon: {fileID: 0}
+    type: 17
+    size: {x: 70, y: 70}
+    globalAligment: 0
+    position: {x: 10, y: 215}
+    startAnimation: 2
+    animationSpeed: 5
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 0
+    locked: 0
+    lockImage: {fileID: 0}

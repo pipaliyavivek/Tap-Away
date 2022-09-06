@@ -1,0 +1,1446 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1012537063627966
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4425734840273058}
+  - component: {fileID: 114615775826769682}
+  m_Layer: 0
+  m_Name: SelectLevel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4425734840273058
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012537063627966}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4020928336269618}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114615775826769682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012537063627966}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5826df738d1a2ec40910dda466514a65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  caption: Select evel
+  size: {x: 240, y: 120}
+  scrollViewSize: {x: 0, y: 0}
+  position: {x: 0, y: 0}
+  globalAligment: 1
+  startAnimation: 4
+  animationSpeed: 50
+  skin: {fileID: 0}
+  icon: {fileID: 2800000, guid: f07338502e2684a4c93314c0dc0268a4, type: 3}
+  draggable: 0
+  autoAdjustSize: 1
+  interactionSound: {fileID: 8300000, guid: d173922c51c5bda49b41bba60c3d3d0f, type: 3}
+  Elements:
+  - caption: CLOSE
+    icon: {fileID: 0}
+    type: 0
+    size: {x: 100, y: 20}
+    globalAligment: 3
+    position: {x: 0, y: 0}
+    startAnimation: 4
+    animationSpeed: 1
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 0
+    locked: 0
+    lockImage: {fileID: 0}
+  - caption: 1
+    icon: {fileID: 0}
+    type: 9
+    size: {x: 40, y: 30}
+    globalAligment: 0
+    position: {x: 10, y: 20}
+    startAnimation: 2
+    animationSpeed: 3
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 0
+    locked: 0
+    lockImage: {fileID: 2800000, guid: f07338502e2684a4c93314c0dc0268a4, type: 3}
+  - caption: 2
+    icon: {fileID: 0}
+    type: 9
+    size: {x: 40, y: 30}
+    globalAligment: 0
+    position: {x: 55, y: 20}
+    startAnimation: 2
+    animationSpeed: 3
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 1
+    locked: 1
+    lockImage: {fileID: 2800000, guid: f07338502e2684a4c93314c0dc0268a4, type: 3}
+  - caption: 3
+    icon: {fileID: 0}
+    type: 9
+    size: {x: 40, y: 30}
+    globalAligment: 0
+    position: {x: 100, y: 20}
+    startAnimation: 2
+    animationSpeed: 3
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 2
+    locked: 1
+    lockImage: {fileID: 2800000, guid: f07338502e2684a4c93314c0dc0268a4, type: 3}
+  - caption: 4
+    icon: {fileID: 0}
+    type: 9
+    size: {x: 40, y: 30}
+    globalAligment: 0
+    position: {x: 145, y: 20}
+    startAnimation: 2
+    animationSpeed: 3
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 3
+    locked: 1
+    lockImage: {fileID: 2800000, guid: f07338502e2684a4c93314c0dc0268a4, type: 3}
+  - caption: 5
+    icon: {fileID: 0}
+    type: 9
+    size: {x: 40, y: 30}
+    globalAligment: 0
+    position: {x: 190, y: 20}
+    startAnimation: 2
+    animationSpeed: 3
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 4
+    locked: 1
+    lockImage: {fileID: 2800000, guid: f07338502e2684a4c93314c0dc0268a4, type: 3}
+  - caption: 6
+    icon: {fileID: 0}
+    type: 9
+    size: {x: 40, y: 30}
+    globalAligment: 0
+    position: {x: 10, y: 55}
+    startAnimation: 2
+    animationSpeed: 2
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 5
+    locked: 1
+    lockImage: {fileID: 2800000, guid: f07338502e2684a4c93314c0dc0268a4, type: 3}
+  - caption: 7
+    icon: {fileID: 0}
+    type: 9
+    size: {x: 40, y: 30}
+    globalAligment: 0
+    position: {x: 55, y: 55}
+    startAnimation: 2
+    animationSpeed: 2
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 6
+    locked: 1
+    lockImage: {fileID: 2800000, guid: f07338502e2684a4c93314c0dc0268a4, type: 3}
+  - caption: 8
+    icon: {fileID: 0}
+    type: 9
+    size: {x: 40, y: 30}
+    globalAligment: 0
+    position: {x: 100, y: 55}
+    startAnimation: 2
+    animationSpeed: 2
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 7
+    locked: 1
+    lockImage: {fileID: 2800000, guid: f07338502e2684a4c93314c0dc0268a4, type: 3}
+  - caption: 9
+    icon: {fileID: 0}
+    type: 9
+    size: {x: 40, y: 30}
+    globalAligment: 0
+    position: {x: 145, y: 55}
+    startAnimation: 2
+    animationSpeed: 2
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 8
+    locked: 1
+    lockImage: {fileID: 2800000, guid: f07338502e2684a4c93314c0dc0268a4, type: 3}
+  - caption: 10
+    icon: {fileID: 0}
+    type: 9
+    size: {x: 40, y: 30}
+    globalAligment: 0
+    position: {x: 190, y: 55}
+    startAnimation: 2
+    animationSpeed: 2
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 9
+    locked: 1
+    lockImage: {fileID: 2800000, guid: f07338502e2684a4c93314c0dc0268a4, type: 3}
+--- !u!1 &1217543356725688
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4020928336269618}
+  - component: {fileID: 114929718652498778}
+  m_Layer: 0
+  m_Name: _MainMenuManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4020928336269618
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1217543356725688}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4113736899623766}
+  - {fileID: 4425734840273058}
+  - {fileID: 4751648811436032}
+  - {fileID: 4704549032053348}
+  - {fileID: 4815145705542368}
+  - {fileID: 4752061118807016}
+  - {fileID: 4230561946213460}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114929718652498778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1217543356725688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40fe0e34ea6c0cd41b7748f5682077db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  windows:
+  - {fileID: 114100272249392666}
+  - {fileID: 114615775826769682}
+  - {fileID: 114386700120499730}
+  - {fileID: 114050874905010194}
+  - {fileID: 114763544024652680}
+  - {fileID: 114051132665655984}
+  - {fileID: 114654668840048782}
+  activeWindow: 0
+  autoIndex: 1
+  defaultScreenSize: {x: 800, y: 480}
+--- !u!1 &1243949785899606
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4751648811436032}
+  - component: {fileID: 114386700120499730}
+  m_Layer: 0
+  m_Name: Options
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4751648811436032
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1243949785899606}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4020928336269618}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114386700120499730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1243949785899606}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5826df738d1a2ec40910dda466514a65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  caption: Options
+  size: {x: 300, y: 260}
+  scrollViewSize: {x: 0, y: 0}
+  position: {x: 0, y: 0}
+  globalAligment: 1
+  startAnimation: 4
+  animationSpeed: 50
+  skin: {fileID: 0}
+  icon: {fileID: 0}
+  draggable: 0
+  autoAdjustSize: 1
+  interactionSound: {fileID: 8300000, guid: d173922c51c5bda49b41bba60c3d3d0f, type: 3}
+  Elements:
+  - caption: CLOSE
+    icon: {fileID: 0}
+    type: 0
+    size: {x: 100, y: 20}
+    globalAligment: 3
+    position: {x: 0, y: 0}
+    startAnimation: 4
+    animationSpeed: 1
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 0
+    locked: 0
+    lockImage: {fileID: 0}
+  - caption: '    QUALITY'
+    icon: {fileID: 0}
+    type: 17
+    size: {x: 100, y: 20}
+    globalAligment: 12
+    position: {x: 0, y: 15}
+    startAnimation: 2
+    animationSpeed: 5
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 0
+    locked: 0
+    lockImage: {fileID: 0}
+  - caption: RESOLUTION
+    icon: {fileID: 0}
+    type: 17
+    size: {x: 80, y: 20}
+    globalAligment: 13
+    position: {x: 0, y: 15}
+    startAnimation: 1
+    animationSpeed: 5
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 0
+    locked: 0
+    lockImage: {fileID: 0}
+  - caption: Resolution_Scroll
+    icon: {fileID: 0}
+    type: 21
+    size: {x: 140, y: 170}
+    globalAligment: 13
+    position: {x: 0, y: 30}
+    startAnimation: 1
+    animationSpeed: 5
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 25
+    locked: 0
+    lockImage: {fileID: 0}
+  - caption: Very Low
+    icon: {fileID: 0}
+    type: 10
+    size: {x: 140, y: 20}
+    globalAligment: 0
+    position: {x: 5, y: 30}
+    startAnimation: 2
+    animationSpeed: 5
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 0
+    locked: 0
+    lockImage: {fileID: 0}
+  - caption: Low
+    icon: {fileID: 0}
+    type: 10
+    size: {x: 140, y: 20}
+    globalAligment: 0
+    position: {x: 5, y: 55}
+    startAnimation: 2
+    animationSpeed: 5
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 1
+    locked: 0
+    lockImage: {fileID: 0}
+  - caption: Better
+    icon: {fileID: 0}
+    type: 10
+    size: {x: 140, y: 20}
+    globalAligment: 0
+    position: {x: 5, y: 80}
+    startAnimation: 2
+    animationSpeed: 5
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 2
+    locked: 0
+    lockImage: {fileID: 0}
+  - caption: Standard
+    icon: {fileID: 0}
+    type: 10
+    size: {x: 140, y: 20}
+    globalAligment: 0
+    position: {x: 5, y: 105}
+    startAnimation: 2
+    animationSpeed: 5
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 3
+    locked: 0
+    lockImage: {fileID: 0}
+  - caption: High
+    icon: {fileID: 0}
+    type: 10
+    size: {x: 140, y: 20}
+    globalAligment: 0
+    position: {x: 5, y: 130}
+    startAnimation: 2
+    animationSpeed: 5
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 4
+    locked: 0
+    lockImage: {fileID: 0}
+  - caption: Ultra
+    icon: {fileID: 0}
+    type: 10
+    size: {x: 140, y: 20}
+    globalAligment: 0
+    position: {x: 5, y: 155}
+    startAnimation: 2
+    animationSpeed: 5
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 5
+    locked: 0
+    lockImage: {fileID: 0}
+  - caption: '   FULLSCREEN'
+    icon: {fileID: 0}
+    type: 22
+    size: {x: 140, y: 20}
+    globalAligment: 0
+    position: {x: 175, y: 205}
+    startAnimation: 1
+    animationSpeed: 5
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 5
+    locked: 0
+    lockImage: {fileID: 0}
+  - caption: MouseSens Slider
+    icon: {fileID: 0}
+    type: 25
+    size: {x: 70, y: 20}
+    globalAligment: 0
+    position: {x: 80, y: 200}
+    startAnimation: 2
+    animationSpeed: 5
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 0
+    locked: 0
+    lockImage: {fileID: 0}
+  - caption: Volume Slider
+    icon: {fileID: 0}
+    type: 27
+    size: {x: 70, y: 20}
+    globalAligment: 0
+    position: {x: 80, y: 220}
+    startAnimation: 2
+    animationSpeed: 5
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 0
+    locked: 0
+    lockImage: {fileID: 0}
+  - caption: Mouse Sens
+    icon: {fileID: 0}
+    type: 17
+    size: {x: 70, y: 70}
+    globalAligment: 0
+    position: {x: 10, y: 195}
+    startAnimation: 2
+    animationSpeed: 5
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 0
+    locked: 0
+    lockImage: {fileID: 0}
+  - caption: Volume
+    icon: {fileID: 0}
+    type: 17
+    size: {x: 70, y: 70}
+    globalAligment: 0
+    position: {x: 10, y: 215}
+    startAnimation: 2
+    animationSpeed: 5
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 0
+    locked: 0
+    lockImage: {fileID: 0}
+--- !u!1 &1259470995744630
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4230561946213460}
+  - component: {fileID: 114654668840048782}
+  - component: {fileID: 114540993153719478}
+  - component: {fileID: 114144058600659274}
+  - component: {fileID: 114467681430360614}
+  - component: {fileID: 82493457634734172}
+  m_Layer: 0
+  m_Name: PauseMenu
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4230561946213460
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1259470995744630}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4020928336269618}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114654668840048782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1259470995744630}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5826df738d1a2ec40910dda466514a65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  caption: PAUSE
+  size: {x: 150, y: 180}
+  scrollViewSize: {x: 0, y: 0}
+  position: {x: 0, y: 0}
+  globalAligment: 5
+  startAnimation: 3
+  animationSpeed: 1
+  skin: {fileID: 0}
+  icon: {fileID: 0}
+  draggable: 0
+  autoAdjustSize: 1
+  interactionSound: {fileID: 8300000, guid: d173922c51c5bda49b41bba60c3d3d0f, type: 3}
+  Elements:
+  - caption: RESUME
+    icon: {fileID: 0}
+    type: 13
+    size: {x: 140, y: 25}
+    globalAligment: 10
+    position: {x: 0, y: 20}
+    startAnimation: 4
+    animationSpeed: 5
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 0
+    locked: 0
+    lockImage: {fileID: 0}
+  - caption: RESTART
+    icon: {fileID: 0}
+    type: 14
+    size: {x: 140, y: 25}
+    globalAligment: 10
+    position: {x: 0, y: 50}
+    startAnimation: 4
+    animationSpeed: 5
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 0
+    locked: 0
+    lockImage: {fileID: 0}
+  - caption: HELP
+    icon: {fileID: 0}
+    type: 1
+    size: {x: 140, y: 25}
+    globalAligment: 10
+    position: {x: 0, y: 80}
+    startAnimation: 4
+    animationSpeed: 5
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 3
+    locked: 0
+    lockImage: {fileID: 0}
+  - caption: WWW
+    icon: {fileID: 0}
+    type: 15
+    size: {x: 140, y: 25}
+    globalAligment: 10
+    position: {x: 0, y: 110}
+    startAnimation: 4
+    animationSpeed: 5
+    skin: {fileID: 0}
+    parameter: https://www.assetstore.unity3d.com/en/#!/search/page=1/sortby=popularity/query=publisher:757
+    parameterFloat: 3
+    locked: 0
+    lockImage: {fileID: 0}
+  - caption: EXIT GAME
+    icon: {fileID: 0}
+    type: 1
+    size: {x: 140, y: 25}
+    globalAligment: 10
+    position: {x: 0, y: 140}
+    startAnimation: 4
+    animationSpeed: 5
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 5
+    locked: 0
+    lockImage: {fileID: 0}
+--- !u!114 &114540993153719478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1259470995744630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13bec1c3a7091f24fa0389e5b9f33696, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MenuObject: {fileID: 114654668840048782}
+  buttonCode: 27
+  pauseGame: 1
+--- !u!114 &114144058600659274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1259470995744630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff8680422383d1a45b923639b59d5eb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MenuObject: {fileID: 114654668840048782}
+  TriggerObject: {fileID: 0}
+  pauseGame: 1
+--- !u!114 &114467681430360614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1259470995744630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d03acf3f110bc2244b344af42a6e7d33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MenuObject: {fileID: 114654668840048782}
+  triggerObject: {fileID: 0}
+  pauseGame: 1
+--- !u!82 &82493457634734172
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1259470995744630}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!1 &1687585181513288
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4815145705542368}
+  - component: {fileID: 114763544024652680}
+  m_Layer: 0
+  m_Name: Credits
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4815145705542368
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1687585181513288}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4020928336269618}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114763544024652680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1687585181513288}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5826df738d1a2ec40910dda466514a65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  caption: Credits
+  size: {x: 300, y: 250}
+  scrollViewSize: {x: 0, y: 0}
+  position: {x: 0, y: 0}
+  globalAligment: 1
+  startAnimation: 4
+  animationSpeed: 50
+  skin: {fileID: 0}
+  icon: {fileID: 0}
+  draggable: 0
+  autoAdjustSize: 1
+  interactionSound: {fileID: 8300000, guid: d173922c51c5bda49b41bba60c3d3d0f, type: 3}
+  Elements:
+  - caption: CLOSE
+    icon: {fileID: 0}
+    type: 0
+    size: {x: 100, y: 20}
+    globalAligment: 3
+    position: {x: 0, y: 0}
+    startAnimation: 4
+    animationSpeed: 1
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 0
+    locked: 0
+    lockImage: {fileID: 0}
+  - caption: '    PROGRAMMERS:'
+    icon: {fileID: 0}
+    type: 17
+    size: {x: 250, y: 20}
+    globalAligment: 12
+    position: {x: 0, y: 20}
+    startAnimation: 3
+    animationSpeed: 6
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 0
+    locked: 0
+    lockImage: {fileID: 0}
+  - caption: Name 1
+    icon: {fileID: 0}
+    type: 17
+    size: {x: 250, y: 20}
+    globalAligment: 10
+    position: {x: 0, y: 45}
+    startAnimation: 3
+    animationSpeed: 6
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 0
+    locked: 0
+    lockImage: {fileID: 0}
+  - caption: Name 2
+    icon: {fileID: 0}
+    type: 17
+    size: {x: 250, y: 20}
+    globalAligment: 10
+    position: {x: 0, y: 70}
+    startAnimation: 3
+    animationSpeed: 6
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 0
+    locked: 0
+    lockImage: {fileID: 0}
+  - caption: Name 3
+    icon: {fileID: 0}
+    type: 17
+    size: {x: 250, y: 20}
+    globalAligment: 10
+    position: {x: 0, y: 95}
+    startAnimation: 3
+    animationSpeed: 6
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 0
+    locked: 0
+    lockImage: {fileID: 0}
+  - caption: '    ARTISTS:'
+    icon: {fileID: 0}
+    type: 17
+    size: {x: 250, y: 20}
+    globalAligment: 12
+    position: {x: 0, y: 120}
+    startAnimation: 3
+    animationSpeed: 10
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 0
+    locked: 0
+    lockImage: {fileID: 0}
+  - caption: Name 1
+    icon: {fileID: 0}
+    type: 17
+    size: {x: 250, y: 20}
+    globalAligment: 10
+    position: {x: 0, y: 145}
+    startAnimation: 3
+    animationSpeed: 10
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 0
+    locked: 0
+    lockImage: {fileID: 0}
+  - caption: Name 2
+    icon: {fileID: 0}
+    type: 17
+    size: {x: 250, y: 20}
+    globalAligment: 10
+    position: {x: 0, y: 170}
+    startAnimation: 3
+    animationSpeed: 10
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 0
+    locked: 0
+    lockImage: {fileID: 0}
+  - caption: Name 3
+    icon: {fileID: 0}
+    type: 17
+    size: {x: 250, y: 20}
+    globalAligment: 10
+    position: {x: 0, y: 195}
+    startAnimation: 3
+    animationSpeed: 10
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 0
+    locked: 0
+    lockImage: {fileID: 0}
+--- !u!1 &1877561346354204
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4704549032053348}
+  - component: {fileID: 114050874905010194}
+  m_Layer: 0
+  m_Name: Help
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4704549032053348
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1877561346354204}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4020928336269618}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114050874905010194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1877561346354204}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5826df738d1a2ec40910dda466514a65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  caption: Help
+  size: {x: 300, y: 250}
+  scrollViewSize: {x: 0, y: 0}
+  position: {x: 0, y: 0}
+  globalAligment: 1
+  startAnimation: 4
+  animationSpeed: 50
+  skin: {fileID: 0}
+  icon: {fileID: 0}
+  draggable: 0
+  autoAdjustSize: 1
+  interactionSound: {fileID: 8300000, guid: d173922c51c5bda49b41bba60c3d3d0f, type: 3}
+  Elements:
+  - caption: CLOSE
+    icon: {fileID: 0}
+    type: 0
+    size: {x: 100, y: 20}
+    globalAligment: 3
+    position: {x: 0, y: 0}
+    startAnimation: 4
+    animationSpeed: 1
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 0
+    locked: 0
+    lockImage: {fileID: 0}
+  - caption: '    CONTROLS:'
+    icon: {fileID: 0}
+    type: 17
+    size: {x: 250, y: 20}
+    globalAligment: 12
+    position: {x: 0, y: 20}
+    startAnimation: 2
+    animationSpeed: 10
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 0
+    locked: 0
+    lockImage: {fileID: 0}
+  - caption: To move use....
+    icon: {fileID: 0}
+    type: 17
+    size: {x: 250, y: 20}
+    globalAligment: 10
+    position: {x: 0, y: 45}
+    startAnimation: 2
+    animationSpeed: 8
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 0
+    locked: 0
+    lockImage: {fileID: 0}
+  - caption: To attack use....
+    icon: {fileID: 0}
+    type: 17
+    size: {x: 250, y: 20}
+    globalAligment: 10
+    position: {x: 0, y: 70}
+    startAnimation: 2
+    animationSpeed: 6
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 0
+    locked: 0
+    lockImage: {fileID: 0}
+  - caption: Press <SPACE> to ....
+    icon: {fileID: 0}
+    type: 17
+    size: {x: 250, y: 20}
+    globalAligment: 10
+    position: {x: 0, y: 95}
+    startAnimation: 2
+    animationSpeed: 4
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 0
+    locked: 0
+    lockImage: {fileID: 0}
+  - caption: '    HINTS:'
+    icon: {fileID: 0}
+    type: 17
+    size: {x: 250, y: 20}
+    globalAligment: 12
+    position: {x: 0, y: 120}
+    startAnimation: 2
+    animationSpeed: 10
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 0
+    locked: 0
+    lockImage: {fileID: 0}
+  - caption: It's worth to....
+    icon: {fileID: 0}
+    type: 17
+    size: {x: 250, y: 20}
+    globalAligment: 10
+    position: {x: 0, y: 145}
+    startAnimation: 2
+    animationSpeed: 8
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 0
+    locked: 0
+    lockImage: {fileID: 0}
+  - caption: To get additional...
+    icon: {fileID: 0}
+    type: 17
+    size: {x: 250, y: 20}
+    globalAligment: 10
+    position: {x: 0, y: 170}
+    startAnimation: 2
+    animationSpeed: 6
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 0
+    locked: 0
+    lockImage: {fileID: 0}
+  - caption: Try to....
+    icon: {fileID: 0}
+    type: 17
+    size: {x: 250, y: 20}
+    globalAligment: 10
+    position: {x: 0, y: 200}
+    startAnimation: 2
+    animationSpeed: 4
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 0
+    locked: 0
+    lockImage: {fileID: 0}
+--- !u!1 &1958029699834674
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4113736899623766}
+  - component: {fileID: 114100272249392666}
+  - component: {fileID: 82732827157836832}
+  m_Layer: 0
+  m_Name: MainMenu
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4113736899623766
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1958029699834674}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4020928336269618}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114100272249392666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1958029699834674}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5826df738d1a2ec40910dda466514a65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  caption: Main Menu
+  size: {x: 200, y: 200}
+  scrollViewSize: {x: 0, y: 0}
+  position: {x: 0, y: 0}
+  globalAligment: 1
+  startAnimation: 3
+  animationSpeed: 15
+  skin: {fileID: 0}
+  icon: {fileID: 2800000, guid: 34b4f30bc0aeb134db571f8ea990496a, type: 3}
+  draggable: 0
+  autoAdjustSize: 1
+  interactionSound: {fileID: 8300000, guid: d173922c51c5bda49b41bba60c3d3d0f, type: 3}
+  Elements:
+  - caption: START
+    icon: {fileID: 0}
+    type: 0
+    size: {x: 180, y: 30}
+    globalAligment: 10
+    position: {x: 0, y: 20}
+    startAnimation: 1
+    animationSpeed: 10
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 1
+    locked: 0
+    lockImage: {fileID: 0}
+  - caption: OPTIONS
+    icon: {fileID: 0}
+    type: 0
+    size: {x: 180, y: 30}
+    globalAligment: 10
+    position: {x: 0, y: 55}
+    startAnimation: 2
+    animationSpeed: 5
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 2
+    locked: 0
+    lockImage: {fileID: 0}
+  - caption: HELP
+    icon: {fileID: 0}
+    type: 0
+    size: {x: 180, y: 30}
+    globalAligment: 10
+    position: {x: 0, y: 90}
+    startAnimation: 1
+    animationSpeed: 10
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 3
+    locked: 0
+    lockImage: {fileID: 0}
+  - caption: CREDITS
+    icon: {fileID: 0}
+    type: 0
+    size: {x: 180, y: 30}
+    globalAligment: 10
+    position: {x: 0, y: 125}
+    startAnimation: 2
+    animationSpeed: 5
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 4
+    locked: 0
+    lockImage: {fileID: 0}
+  - caption: EXIT
+    icon: {fileID: 0}
+    type: 0
+    size: {x: 180, y: 30}
+    globalAligment: 10
+    position: {x: 0, y: 160}
+    startAnimation: 1
+    animationSpeed: 10
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 5
+    locked: 0
+    lockImage: {fileID: 0}
+--- !u!82 &82732827157836832
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1958029699834674}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!1 &1963605867878382
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4752061118807016}
+  - component: {fileID: 114051132665655984}
+  m_Layer: 0
+  m_Name: ConfirmationDialog
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4752061118807016
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1963605867878382}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4020928336269618}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114051132665655984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1963605867878382}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5826df738d1a2ec40910dda466514a65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  caption: 
+  size: {x: 200, y: 75}
+  scrollViewSize: {x: 0, y: 0}
+  position: {x: 0, y: 0}
+  globalAligment: 1
+  startAnimation: 0
+  animationSpeed: 0
+  skin: {fileID: 0}
+  icon: {fileID: 0}
+  draggable: 0
+  autoAdjustSize: 1
+  interactionSound: {fileID: 8300000, guid: d173922c51c5bda49b41bba60c3d3d0f, type: 3}
+  Elements:
+  - caption: ARE  YOU  SURE?
+    icon: {fileID: 0}
+    type: 17
+    size: {x: 150, y: 20}
+    globalAligment: 10
+    position: {x: 0, y: 15}
+    startAnimation: 3
+    animationSpeed: 10
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 0
+    locked: 0
+    lockImage: {fileID: 0}
+  - caption: OK
+    icon: {fileID: 0}
+    type: 8
+    size: {x: 90, y: 30}
+    globalAligment: 6
+    position: {x: 0, y: 0}
+    startAnimation: 2
+    animationSpeed: 10
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 0
+    locked: 0
+    lockImage: {fileID: 0}
+  - caption: CANCEL
+    icon: {fileID: 0}
+    type: 0
+    size: {x: 90, y: 30}
+    globalAligment: 9
+    position: {x: 0, y: 0}
+    startAnimation: 1
+    animationSpeed: 10
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 0
+    locked: 0
+    lockImage: {fileID: 0}

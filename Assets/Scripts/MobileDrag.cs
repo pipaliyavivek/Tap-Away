@@ -10,7 +10,8 @@ public class MobileDrag : MonoBehaviour, IDragHandler, IEndDragHandler
     {
         isPressing = true;
         //CubesGanerate.Instance.OnDrag(data);
-        GridEditor.Instance.OnDrag(data);
+        //GridEditor.Instance.OnDrag(data);
+        GameManager.Instance.OnDrag(data);
     }
 
     public void OnEndDrag(PointerEventData data)

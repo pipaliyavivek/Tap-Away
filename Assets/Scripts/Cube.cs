@@ -14,7 +14,7 @@ public class Cube : MonoBehaviour
     internal bool isvalid;
     public float RotationX, RotationY;
     public CubeFace mThisCubeFace;
-    [SerializeField]public List<Collider> HitColliders = new List<Collider>();
+    [SerializeField] public List<Collider> HitColliders = new List<Collider>();
 
     public List<Cube> m_OthersCube = new List<Cube>();
 
@@ -24,7 +24,7 @@ public class Cube : MonoBehaviour
         {
             transform.position += transform.TransformDirection(Vector3.forward) * (Time.deltaTime * 20);
         }
-      //  Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward), Color.red);
+        //  Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward), Color.red);
     }
     [Button]
     /*void FulFill()
@@ -39,28 +39,28 @@ public class Cube : MonoBehaviour
     }*/
     void Start()
     {
-     //   CubesGanerate.Instance.m_CallALLEvent.AddListener(RotateThisCube);
-      //After  GetRotation();
+        //   CubesGanerate.Instance.m_CallALLEvent.AddListener(RotateThisCube);
+        //After  GetRotation();
         //RotateThisCube();
     }
-   [Button]
-   public void RotationSetManually(float Rotationx,float Rotationy,Vector2 ignored)
+    [Button]
+    public void RotationSetManually(float Rotationx, float Rotationy, Vector2 ignored)
     {
         var tmp = transform.localEulerAngles;
         tmp.x = Rotationx;
         tmp.y = Rotationy;
-        transform.localEulerAngles = tmp;       
-        if(ignored.x==0)
+        transform.localEulerAngles = tmp;
+        if (ignored.x == 0)
         {
             int a = 0;
-            while(transform.localEulerAngles.y == -ignored.y)
+            while (transform.localEulerAngles.y == -ignored.y)
             {
                 Rotaterandom();
                 a++;
                 if (a >= 100) { Debug.Log("NOT FOUND ROTATION"); break; };
             }
         }
-        if(ignored.y == 0)
+        if (ignored.y == 0)
         {
             int a = 0;
             while (transform.localEulerAngles.x == -ignored.x)
@@ -74,12 +74,12 @@ public class Cube : MonoBehaviour
     [Button]
     public void GetRotation()
     {
-        RotationX = Clamp0360(transform.localEulerAngles.x);        
+        RotationX = Clamp0360(transform.localEulerAngles.x);
         RotationY = Clamp0360(transform.localEulerAngles.y);
-        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out RaycastHit hit, Mathf.Infinity, 1<<6))
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out RaycastHit hit, Mathf.Infinity, 1 << 6))
         {
             Debug.Log(hit.distance);
-            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward),Color.black,100f);
+            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward), Color.black, 100f);
             if (hit.collider.gameObject.name == "UP")
             {
                 mThisCubeFace = CubeFace.UP;
@@ -114,51 +114,51 @@ public class Cube : MonoBehaviour
     }
     [Button]
     public float Clamp0360(float angle)
-    {   
+    {
         angle %= 360;
         if (angle > 180)
-            return ClampAAngle(angle- 360);        
+            return ClampAAngle(angle - 360);
         return ClampAAngle(angle);
     }
     public float ClampAAngle(float angle)
     {
         if (angle > -10 && angle < 10) angle = 0;
         else if (angle > -100 && angle < -80) angle = -90;
-        else if(angle > 80 && angle < 100) angle = 90;
-        else if(angle > 170 && angle <= 180) angle = 180;
-        else if(angle < -170 && angle >= -180) angle = -180;
+        else if (angle > 80 && angle < 100) angle = 90;
+        else if (angle > 170 && angle <= 180) angle = 180;
+        else if (angle < -170 && angle >= -180) angle = -180;
         return angle;
     }
-   
+
     public void OnMouseUpAsButton()
-    { 
-    //Debug.Log("Vector 3: " + Vector3.up+" Left: "+Vector3.left+" Right "+Vector3.right+" down "+Vector3.down+" forword "+Vector3.forward);
-    RaycastHit hit;
-    //Debug.Log("Vector 3 up" + Vector3.up);
-    if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 3))
     {
-        Debug.Log("Hit distance is :: " + hit.distance);
-        if (hit.distance > 1)
+        //Debug.Log("Vector 3: " + Vector3.up+" Left: "+Vector3.left+" Right "+Vector3.right+" down "+Vector3.down+" forword "+Vector3.forward);
+        RaycastHit hit;
+        //Debug.Log("Vector 3 up" + Vector3.up);
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 3))
         {
-            //Move object in between till empty objects               
-            Move_Cubes((int)hit.distance);
+            Debug.Log("Hit distance is :: " + hit.distance);
+            if (hit.distance > 1)
+            {
+                //Move object in between till empty objects               
+                Move_Cubes((int)hit.distance);
+            }
+            else
+            {
+                //Debug.Log((hit.distance));
+                ShakeinDirection(transform.TransformDirection(Vector3.forward));
+            }
         }
         else
         {
-            //Debug.Log((hit.distance));
-            ShakeinDirection(transform.TransformDirection(Vector3.forward));
+            Move = true;
+            //   if(CubesGanerate.Instance.Allcubes.Contains(this)) CubesGanerate.Instance.Allcubes.RemoveAt(CubesGanerate.Instance.Allcubes.IndexOf(this));
+            Destroy(gameObject, 1.5f);
+            //CubesGanerate.Instance.AllCubes.Remove(transform);
+            Debug.Log("Ok move");
+            GameManager.Instance.Gameover();
+            //Forword direction 
         }
-    }
-    else
-    {
-        Move = true;
-     //   if(CubesGanerate.Instance.Allcubes.Contains(this)) CubesGanerate.Instance.Allcubes.RemoveAt(CubesGanerate.Instance.Allcubes.IndexOf(this));
-        Destroy(gameObject, 1.5f);
-        //CubesGanerate.Instance.AllCubes.Remove(transform);
-        Debug.Log("Ok move");
-        GameManager.Instance.Gameover();
-        //Forword direction 
-    }                
     }
     public void ShakeinDirection(Vector3 Dir)
     {
@@ -200,8 +200,8 @@ public class Cube : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 100))
         {
-            var lhitcube =hit.collider.GetComponent<Cube>();
-            if(lhitcube) return lhitcube;
+            var lhitcube = hit.collider.GetComponent<Cube>();
+            if (lhitcube) return lhitcube;
             return this;
 
         }
@@ -243,7 +243,7 @@ public class Cube : MonoBehaviour
             if (hit.collider.GetComponent<Cube>().GetFacingcube() != this)
             {
                 Directions.Add(transform.TransformDirection(-Vector3.forward));
-              //  Debug.Log("Forward minus" + transform.localEulerAngles.y);
+                //  Debug.Log("Forward minus" + transform.localEulerAngles.y);
             }
         }
         else
@@ -270,15 +270,15 @@ public class Cube : MonoBehaviour
             {
                 Directions.Add(transform.TransformDirection(Vector3.up));
             }
-        } 
+        }
         else
         {
             Directions.Add(transform.TransformDirection(Vector3.up));
-        }        
+        }
         //transform.rotation = Quaternion.Euler(0, CubesGanerate.Instance.Rotation_Cubes[Random.Range(0, CubesGanerate.Instance.Rotation_Cubes.Count)], 0);
         var lookdirection = transform.position - Directions[Random.Range(0, Directions.Count)];
         transform.LookAt(lookdirection);
-       //after GetRotation();
+        //after GetRotation();
     }
     #region Old_Script
     [SerializeField] public List<Cube> m_CubeItem = new List<Cube>();
@@ -329,12 +329,12 @@ public class Cube : MonoBehaviour
         if (RotationX == (-hitcube.RotationX))
         {
             Vector2 IgnorVector = new Vector2(0, -hitcube.RotationX);
-            hitcube.RotationSetManually(RotationX,0, IgnorVector);
+            hitcube.RotationSetManually(RotationX, 0, IgnorVector);
         }
         if (RotationY == (-hitcube.RotationY))
         {
             Vector2 IgnorVector = new Vector2(-hitcube.RotationY, 0);
-            hitcube.RotationSetManually(0,RotationY, IgnorVector);
+            hitcube.RotationSetManually(0, RotationY, IgnorVector);
         }
     }
     #region Dust
@@ -364,16 +364,16 @@ public class Cube : MonoBehaviour
         if (localangle.x != 0 && localangle.x > 180) localangle.x = 180 - localangle.x;
         if (localangle.y != 0 && localangle.y > 180) localangle.y = 180 - localangle.y;
         if (localangle.z != 0 && localangle.z > 180) localangle.z = 180 - localangle.z;
-        var rotationcubelist = CubesGanerate.Instance.Rotation_Cubes;        
-        if(localangle.x !=0 ||localangle.x == -i_OtherRotation.x)
+        var rotationcubelist = CubesGanerate.Instance.Rotation_Cubes;
+        if (localangle.x != 0 || localangle.x == -i_OtherRotation.x)
         {
             localangle.x = rotationcubelist[Random.Range(0, rotationcubelist.Count)];
         }
-        else if(localangle.y !=0 || localangle.y == -i_OtherRotation.y)
+        else if (localangle.y != 0 || localangle.y == -i_OtherRotation.y)
         {
             localangle.y = rotationcubelist[Random.Range(0, rotationcubelist.Count)];
         }
-        else if(localangle.z !=0)
+        else if (localangle.z != 0)
         {
             /*localangle.x = rotationcubelist[Random.Range(0, rotationcubelist.Count)];*/
         }
@@ -401,7 +401,7 @@ public class Cube : MonoBehaviour
 }
 public enum CubeFace
 {
-    UP,DOWN,LEFT,RIGHT,FORWARD,BACKWARD
+    UP, DOWN, LEFT, RIGHT, FORWARD, BACKWARD
 }
 [System.Serializable]
 public class CubeData

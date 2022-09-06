@@ -82,7 +82,10 @@ public class GridEditor : MonoBehaviour
             {
                 for (int k = 0; k < Grid.z; k++)
                 {
-                    GameObject cell = PrefabUtility.InstantiatePrefab(CellPrefab, transform) as GameObject;
+
+                    GameObject cell = new GameObject();
+                    //GameObject cell = PrefabUtility.InstantiatePrefab(CellPrefab, transform) as GameObject;
+                  //  GameObject cell = PrefabUtility.InstantiatePrefab(CellPrefab, transform) as GameObject;
                     cell.transform.localPosition = new Vector3(Distance.x * k, Distance.y * j, Distance.z * i);
                     var CellScr = cell.GetComponent<Cell>();
                     CellScr.Finalquaternion = cell.transform.position;

@@ -1,0 +1,133 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class LevelUI_Main : MonoBehaviour {
+
+	public Camera mainCamera;
+	public GameLevelManger levelManger;
+	public LevelUI_LevelIcon levelIconAsset;
+	public LineRenderer lineRender;
+
+	public Transform playerIcon;
+	public Transform cloudMask;
+
+	Vector3[] settingPosition;
+	List<LevelUI_LevelIcon> levelIcons = new List<LevelUI_LevelIcon>();
+	CameraInputMove mainCameraMove;
+
+	// Use this for initialization
+	void Start () 
+	{
+		mainCameraMove = mainCamera.GetComponent <CameraInputMove>();
+
+		settingPosition = new Vector3[lineRender.positionCount];
+		for (int i = 0; i < settingPosition.Length; i++)
+		{
+			settingPosition[i] = lineRender.GetPosition (i);
+		}
+
+		int id = 0;
+		int sectionID = 0;
+		int passLevelID = 0;
+		List<Vector3> linePos = new List<Vector3>();
+
+		int unPassLevelCount = 0;
+
+		for (int x = 0; x < levelManger.groupCount; x ++)
+		{
+			GameLevelGroup thisGroup = levelManger.GetGroup (x);
+			for (int y = 0; y < thisGroup.levelCount; y++)
+			{
+				if(unPassLevelCount > 15)
+				{
+					break;
+				}
+				else
+				{
+					GameLevel thisLevel = thisGroup.GetLevel (y);
+					if(thisLevel != null)
+					{
+						GameObject newLeveIconObj = Instantiate <GameObject>(levelIconAsset.gameObject,transform);
+						LevelUI_LevelIcon newLevelIcon = newLeveIconObj.GetComponent <LevelUI_LevelIcon>();
+						newLevelIcon.SetLevel (thisLevel);
+
+						Vector3 iconPosition = settingPosition[id];
+						iconPosition = new Vector3(iconPosition.x,iconPosition.y,iconPosition.z + sectionID * settingPosition[settingPosition.Length - 1].z);
+
+						newLevelIcon.transform.position = iconPosition;
+						linePos.Add (iconPosition);
+
+						if(thisLevel.isUnlock)
+						{
+							playerIcon.position = iconPosition;
+							mainCameraMove.CenterOn (newLevelIcon.transform);
+							passLevelID = y;
+						}
+						else
+						{
+							unPassLevelCount ++;
+						}
+
+						newLevelIcon.onClick += OnIconClick;
+						levelIcons.Add (newLevelIcon);
+					}
+
+					id ++;
+
+					if(id >= settingPosition.Length)
+					{
+						sectionID ++;
+						id = 0;
+					}
+				}
+			}
+		}
+
+		lineRender.positionCount = linePos.Count;
+		lineRender.SetPositions (linePos.ToArray ());
+
+		HideOrShowIcon ();
+		passLevelID = passLevelID < 10?10:passLevelID;
+
+		mainCameraMove.SetMaxMinZ (levelIcons[passLevelID].transform.position.z + 10,levelIcons[0].transform.position.z);
+		cloudMask.position = new Vector3(0,4,levelIcons[passLevelID].transform.position.z + 16);
+
+	}
+
+	void HideOrShowIcon ()
+	{
+		for (int i = 0; i < levelIcons.Count; i++)
+		{
+			LevelUI_LevelIcon thisLevelIcon = levelIcons[i];
+			float dir = Mathf.Abs(thisLevelIcon.transform.position.z - mainCamera.transform.position.z);
+
+			if(dir < 17)
+			{
+				thisLevelIcon.gameObject.SetActive (true);
+			}
+			else
+			{
+				thisLevelIcon.gameObject.SetActive (false);
+			}
+		}
+	}
+
+	void OnIconClick (LevelUI_LevelIcon clickIcon)
+	{
+		if(clickIcon == null)
+			return;
+
+		if(clickIcon.gameLevel.isUnlock)
+        {
+            GameController.assetGameLevel = clickIcon.gameLevel;
+            GUI_LoadingUI.instance.LoadLevel("Game");
+        }
+	}
+	
+	// Update is called once per frame
+	void Update () {
+		if(mainCameraMove.isMove)
+			HideOrShowIcon ();
+	}
+}

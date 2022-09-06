@@ -4505,7 +4505,7 @@ GameObject:
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1083374343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6410,6 +6410,15 @@ MonoBehaviour:
   GamePanel: {fileID: 788605978}
   Level_no_txt: {fileID: 1894733013}
   Levelno: 0
+  m_allLevels:
+  - {fileID: 124307723237650060, guid: 9fc57d65e3206b84b846febe98499477, type: 3}
+  - {fileID: 7879779273568999499, guid: 9e5f7ad0d0448d943a30ee187e748262, type: 3}
+  - {fileID: 4949881957875400435, guid: 7d3e8a4fcf07b9a43b5b45565c225ab0, type: 3}
+  - {fileID: 8562389353441515066, guid: 41d9acf8060651d449b8c3fcc3cf3b34, type: 3}
+  m_Drag: {fileID: 0}
+  orbitXSpeed: 50
+  orbitYSpeed: 50
+  orbitSmooth: 10
 --- !u!1 &1628056654
 GameObject:
   m_ObjectHideFlags: 0

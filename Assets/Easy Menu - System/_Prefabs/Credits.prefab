@@ -1,0 +1,176 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1520297162084274
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4047313698457212}
+  - component: {fileID: 114311623231518466}
+  m_Layer: 0
+  m_Name: Credits
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4047313698457212
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1520297162084274}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114311623231518466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1520297162084274}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5826df738d1a2ec40910dda466514a65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  caption: Credits
+  size: {x: 300, y: 250}
+  scrollViewSize: {x: 0, y: 0}
+  position: {x: 0, y: 0}
+  globalAligment: 1
+  startAnimation: 4
+  animationSpeed: 50
+  skin: {fileID: 0}
+  icon: {fileID: 0}
+  draggable: 0
+  autoAdjustSize: 1
+  interactionSound: {fileID: 8300000, guid: d173922c51c5bda49b41bba60c3d3d0f, type: 3}
+  Elements:
+  - caption: CLOSE
+    icon: {fileID: 0}
+    type: 0
+    size: {x: 100, y: 20}
+    globalAligment: 3
+    position: {x: 0, y: 0}
+    startAnimation: 4
+    animationSpeed: 1
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 0
+    locked: 0
+    lockImage: {fileID: 0}
+  - caption: '    PROGRAMMERS:'
+    icon: {fileID: 0}
+    type: 17
+    size: {x: 250, y: 20}
+    globalAligment: 12
+    position: {x: 0, y: 20}
+    startAnimation: 3
+    animationSpeed: 6
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 0
+    locked: 0
+    lockImage: {fileID: 0}
+  - caption: Name 1
+    icon: {fileID: 0}
+    type: 17
+    size: {x: 250, y: 20}
+    globalAligment: 10
+    position: {x: 0, y: 45}
+    startAnimation: 3
+    animationSpeed: 6
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 0
+    locked: 0
+    lockImage: {fileID: 0}
+  - caption: Name 2
+    icon: {fileID: 0}
+    type: 17
+    size: {x: 250, y: 20}
+    globalAligment: 10
+    position: {x: 0, y: 70}
+    startAnimation: 3
+    animationSpeed: 6
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 0
+    locked: 0
+    lockImage: {fileID: 0}
+  - caption: Name 3
+    icon: {fileID: 0}
+    type: 17
+    size: {x: 250, y: 20}
+    globalAligment: 10
+    position: {x: 0, y: 95}
+    startAnimation: 3
+    animationSpeed: 6
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 0
+    locked: 0
+    lockImage: {fileID: 0}
+  - caption: '    ARTISTS:'
+    icon: {fileID: 0}
+    type: 17
+    size: {x: 250, y: 20}
+    globalAligment: 12
+    position: {x: 0, y: 120}
+    startAnimation: 3
+    animationSpeed: 10
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 0
+    locked: 0
+    lockImage: {fileID: 0}
+  - caption: Name 1
+    icon: {fileID: 0}
+    type: 17
+    size: {x: 250, y: 20}
+    globalAligment: 10
+    position: {x: 0, y: 145}
+    startAnimation: 3
+    animationSpeed: 10
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 0
+    locked: 0
+    lockImage: {fileID: 0}
+  - caption: Name 2
+    icon: {fileID: 0}
+    type: 17
+    size: {x: 250, y: 20}
+    globalAligment: 10
+    position: {x: 0, y: 170}
+    startAnimation: 3
+    animationSpeed: 10
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 0
+    locked: 0
+    lockImage: {fileID: 0}
+  - caption: Name 3
+    icon: {fileID: 0}
+    type: 17
+    size: {x: 250, y: 20}
+    globalAligment: 10
+    position: {x: 0, y: 200}
+    startAnimation: 3
+    animationSpeed: 10
+    skin: {fileID: 0}
+    parameter: 
+    parameterFloat: 0
+    locked: 0
+    lockImage: {fileID: 0}
